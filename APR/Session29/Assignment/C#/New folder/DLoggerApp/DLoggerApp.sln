@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33414.496
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DLoggerApp", "DLoggerApp\DLoggerApp.csproj", "{B9AA7899-6D3D-4AD0-B875-D400F5E96F5F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9AA7899-6D3D-4AD0-B875-D400F5E96F5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9AA7899-6D3D-4AD0-B875-D400F5E96F5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9AA7899-6D3D-4AD0-B875-D400F5E96F5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9AA7899-6D3D-4AD0-B875-D400F5E96F5F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0E5E70E9-DD38-41AB-94FB-A50A08C284B0}
+	EndGlobalSection
+EndGlobal

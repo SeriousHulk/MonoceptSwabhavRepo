@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Local Storage</h1>
+    <script>
+      save();
+      display();
+
+      function save() {
+        var students = [];
+        students.push({ id: 1, name: 'Anekant' });
+        students.push({ id: 2, name: 'Gautam' });
+        students.push({ id: 3, name: 'Vikrant' });
+        console.log(students);
+        console.log(JSON.stringify(students));
+        var studentList = JSON.parse(JSON.stringify(students));
+        studentList.forEach((s) => console.log(s.id + ' ' + s.name));
+        localStorage['monocept.students'] = JSON.stringify(students);
+      }
+      function display() {
+        var students2 = localStorage['monocept.students'];
+        var studentList = JSON.parse(students2);
+        studentList.forEach((s) => console.log(s.id + ' ' + s.name));
+      }
+    </script>
+  </body>
+</html>

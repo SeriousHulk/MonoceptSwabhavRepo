@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button id="btnHide" onclick="hideImage()">
+            Hide
+        </button>
+        <button id="btnShow" onclick="showImage()">
+            Show
+        </button>
+        <br/>
+        <img id="imgPicture" src="https://tsm.swabhavtechlabs.com/assets/logo/swabhav-logo-black.png" alt="picture">
+    </div>
+    <script>
+        var imgPic = document.querySelector("#imgPicture")
+        function hideImage(){
+            imgPic.style.visibility = 'hidden';
+        }
+        function showImage(){
+            imgPic.style.visibility = 'visible';
+        }
+    </script>
+</body>
+</html>

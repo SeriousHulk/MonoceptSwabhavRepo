@@ -1,0 +1,50 @@
+<script>
+    /*Commenting Best Practices
+    Now that we have a good idea of what comments are and the several ways we
+    have to write them in JavaScript, let’s talk a bit about how to properly use com
+    ments to make your code easy to read:
+    1. Always comment your code as you are writing it. Writing comments is
+    dreadfully boring, but it is an important part of writing code. It is much more
+    time efficient for you (and others) to understand what your code does from
+    reading a comment as opposed to reading line after line of boring JavaScript.
+    2. Don’t defer comment writing for later. Related to the previous point, deferring
+    comment writing for a later time is the grown-up equivalent of procrastinating
+    on a chore. If you don’t comment your code as you are writing it, you’ll prob
+    ably just skip commenting entirely. That’s not a good thing.
+    3. Use more English and less JavaScript. Comments are one of the few places
+    when writing JavaScript that you can freely use English (or whatever language
+    you prefer communicating in). Don’t complicate your comments unnecessarily
+    with code. Be clear. Be concise. Use words.
+    4. Embrace whitespace. When scanning large blocks of code, you want to
+    ensure your comments stand out and are clear to follow. That involves being
+    liberal with your Spacebar and Enter/Return key. Take a look at the following
+    example:*/
+        function selectInitialState(state) {
+        var selectContent = document.querySelector("#stateList");
+        var stateIndex = null;
+        /*
+        For the returned state, we would like to ensure that
+        we select it in our UI. This means we iterate through
+        every state in the drop-down until we find a match.
+        When a match is found, we ensure it gets selected.
+        */
+        for (var i = 0; i < selectContent.length; i++) {
+        var stateInSelect = selectContent.options[i].innerText;
+        if (stateInSelect == state) {
+                stateIndex = i;
+                }
+            }
+            selectContent.selectedIndex = stateIndex;
+        }   
+        /*
+        Notice that our comment is appropriately spaced to distinguish it from the rest
+        of the code. If your comments are strewn about in arbitrary locations where
+        they are difficult to identify, that just unnecessarily slows you and whoever is
+        reading your code down.
+        5. Don’t comment obvious things. If a line of code is self-explanatory, don’t waste
+        time explaining what it does unless there is some subtle behavior you need to
+        call out as a warning. Instead, invest that time in commenting the less obvious
+        parts of your code. 
+    */
+</script>
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Slider 1</h1>
+    <input type="range" min="1" max="50" value="5" name="" id="slider" />
+    <h1 id="h1Display"></h1>
+    <div id="btnContainer"></div>
+    <script>
+      var slider = document.querySelector('#slider');
+      var h1Display = document.querySelector('#h1Display');
+      h1Display.innerHTML = slider.value;
+      displayButtons(slider.value);
+      slider.addEventListener('change', function () {
+        h1Display.innerHTML = slider.value;
+        displayButtons(slider.value);
+      });
+
+      function displayButtons(btnCount) {
+        var btnContainer = document.querySelector('#btnContainer');
+        var allButtons = '';
+        for (var i = 0; i < btnCount; i++) {
+          allButtons += `<button onClick=fnClickHandler(${i}) style=background-color:indianred>${i}</button>&nbsp`;
+        }
+        btnContainer.innerHTML = allButtons;
+      }
+      function fnClickHandler(value) {
+        if (value % 2 == 0) {
+          e.target.value = 0;
+        }
+      }
+    </script>
+  </body>
+</html>

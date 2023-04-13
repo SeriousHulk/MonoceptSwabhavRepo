@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33414.496
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPRViolation", "SPRViolation\SPRViolation.csproj", "{30716C15-3524-46FB-89B8-4D1F821CF0EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SRPRefactorApp", "SRPRefactorApp\SRPRefactorApp.csproj", "{4FBD467D-FE0F-44E3-A556-807566E75A4B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30716C15-3524-46FB-89B8-4D1F821CF0EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30716C15-3524-46FB-89B8-4D1F821CF0EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30716C15-3524-46FB-89B8-4D1F821CF0EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30716C15-3524-46FB-89B8-4D1F821CF0EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FBD467D-FE0F-44E3-A556-807566E75A4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FBD467D-FE0F-44E3-A556-807566E75A4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FBD467D-FE0F-44E3-A556-807566E75A4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FBD467D-FE0F-44E3-A556-807566E75A4B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AFF6A7A2-FA0B-4165-BE30-2093FDD532BB}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anagram Form</title>
+    <script src="Anagram.js"></script>
+</head>
+<body>
+  <h3> Anagram Checker </h3>
+    <form>
+      <label for="str1">String 1:</label>
+      <input type="text" id="str1" name="str1"><br>
+  
+      <label for="str2">String 2:</label>
+      <input type="text" id="str2" name="str2"><br>
+  
+      <button type="button" onclick="checkAnagrams()">Check Anagrams</button>
+    </form>
+  
+    <div id="result"></div>
+    <script>
+        function checkAnagrams() {
+          const str1 = document.getElementById("str1").value;
+          const str2 = document.getElementById("str2").value;
+          const result = isAnagrams(str1, str2);
+          const resultDiv = document.getElementById("result");
+          if (result) 
+          {
+            resultDiv.textContent = "The strings are anagrams!";
+          } 
+          else 
+          {
+            resultDiv.textContent = "The strings are not anagrams.";
+          }
+        }
+      </script>
+  </body>
+</html>

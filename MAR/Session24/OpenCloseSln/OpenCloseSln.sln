@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33414.496
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OCPViolationApp", "OCPViolationApp\OCPViolationApp.csproj", "{8D851A49-E502-4DE8-AA78-66969F787C4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FixedDepositLib", "FixedDepositLib\FixedDepositLib.csproj", "{CA5CF58C-1475-4E44-8826-583891B6FBC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AxisBankFDApp", "AxisBankFDApp\AxisBankFDApp.csproj", "{971DE011-F290-4E9A-B71F-77BC2319B201}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KotakBankApp", "KotakBankApp\KotakBankApp.csproj", "{1114DE3A-1BCC-462D-A32E-5F47E05A6186}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D851A49-E502-4DE8-AA78-66969F787C4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D851A49-E502-4DE8-AA78-66969F787C4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D851A49-E502-4DE8-AA78-66969F787C4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D851A49-E502-4DE8-AA78-66969F787C4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA5CF58C-1475-4E44-8826-583891B6FBC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA5CF58C-1475-4E44-8826-583891B6FBC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA5CF58C-1475-4E44-8826-583891B6FBC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA5CF58C-1475-4E44-8826-583891B6FBC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{971DE011-F290-4E9A-B71F-77BC2319B201}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{971DE011-F290-4E9A-B71F-77BC2319B201}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{971DE011-F290-4E9A-B71F-77BC2319B201}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{971DE011-F290-4E9A-B71F-77BC2319B201}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1114DE3A-1BCC-462D-A32E-5F47E05A6186}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1114DE3A-1BCC-462D-A32E-5F47E05A6186}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1114DE3A-1BCC-462D-A32E-5F47E05A6186}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1114DE3A-1BCC-462D-A32E-5F47E05A6186}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {85D21299-B661-42B7-B077-1D22586ED571}
+	EndGlobalSection
+EndGlobal

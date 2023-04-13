@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33414.496
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingletonServiceApp", "SingletonServiceApp\SingletonServiceApp.csproj", "{ECCC1D14-01D2-4B88-8034-2F246B74BBF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynchronyzedThreadsApp", "SynchronyzedThreadsApp\SynchronyzedThreadsApp.csproj", "{84609A60-A836-4954-A033-D4851582F26F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECCC1D14-01D2-4B88-8034-2F246B74BBF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECCC1D14-01D2-4B88-8034-2F246B74BBF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECCC1D14-01D2-4B88-8034-2F246B74BBF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECCC1D14-01D2-4B88-8034-2F246B74BBF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84609A60-A836-4954-A033-D4851582F26F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84609A60-A836-4954-A033-D4851582F26F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84609A60-A836-4954-A033-D4851582F26F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84609A60-A836-4954-A033-D4851582F26F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {996915D9-C593-4E69-B7CC-DBEE02A71882}
+	EndGlobalSection
+EndGlobal

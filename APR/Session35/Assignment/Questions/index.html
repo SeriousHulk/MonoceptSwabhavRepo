@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="question-container">
+      <h1>Quiz</h1>
+      <p id="statement"></p>
+      <form id="quizForm">
+        <div class="options">
+          <label><input type="radio" name="answer" value="yes" />Yes</label>
+          <label><input type="radio" name="answer" value="no" />No</label>
+        </div>
+        <input type="submit" value="Submit" class="btn-submit" />
+      </form>
+      <div class="result" id="result"></div>
+      <div class="question-counter" id="questionCounter"></div>
+      <button class="btn-left" id="leftBtn">Left</button>
+      <button class="btn-right" id="rightBtn">Right</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

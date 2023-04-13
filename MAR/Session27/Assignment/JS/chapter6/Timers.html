@@ -1,0 +1,11 @@
+<script>
+    function showAlert() {
+    console.log("moo");
+    }
+    var timeID = setTimeout(showAlert, 5000);
+
+    function drawText() {
+    document.querySelector("p").textContent += "#\n";
+    }
+    var intervalID = setInterval(drawText, 2000);
+</script>

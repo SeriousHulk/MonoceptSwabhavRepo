@@ -1,0 +1,23 @@
+<script>
+    var x = 100;
+    function blockScoping() {
+        if (true) {
+            let x = 350;
+            //value of x is 350 here
+            console.log(x) 
+        }
+      //value of x is 100 here
+      console.log(x)
+    }
+    blockScoping(); 
+
+    //var doesent support scopes
+    function checkWeight(weight) {
+    if (weight > 5000) {
+            var text = "Free shipping Not Available!";
+            alert(text);
+        }
+        alert(text); 
+    }
+    checkWeight(6000);
+</script>

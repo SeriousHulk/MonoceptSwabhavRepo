@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Select Color:
+        <select id="colorpicker" onblur="updateColor()">
+            <option value="">----select----</option>
+            <option value="red">red</option>
+            <option value="blue">blue</option>
+            <option value="green">Green</option>
+            <option value="black">Black</option>
+        </select>
+    </p>
+    <script>
+        var colorpicker = document.getElementById("colorpicker")
+        function updateColor(e){
+            document.body.style.backgroundColor = colorpicker.value
+        }
+    </script>
+</body>
+</html>

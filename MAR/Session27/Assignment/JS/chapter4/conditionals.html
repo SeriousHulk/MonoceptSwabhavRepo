@@ -1,0 +1,15 @@
+<script>
+    var xPos = 300;
+    var yPos = 150;
+    debugger;
+    function sendWarning(x, y) {
+    if ((x < xPos) && (y < yPos)) {
+        console.log("Adjust the position");
+    } else {
+        console.log("Things are fine!");
+    }
+    }
+    sendWarning(500, 160);
+    sendWarning(100, 100);
+    sendWarning(201, 149);
+</script>

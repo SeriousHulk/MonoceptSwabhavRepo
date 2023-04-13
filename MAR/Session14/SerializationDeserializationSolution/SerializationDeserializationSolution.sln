@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33414.496
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerLib", "CustomerLib\CustomerLib.csproj", "{A08CD15B-765C-4BD5-8DF5-DDC2D034E779}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerSerializationApp", "CustomerSerializationApp\CustomerSerializationApp.csproj", "{D88CCD5F-E146-464D-88FD-84E6903EA00B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerDeserializationApp", "CustomerDeserializationApp\CustomerDeserializationApp.csproj", "{53ABFEEA-D55B-4699-A274-BB4EA457706A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A08CD15B-765C-4BD5-8DF5-DDC2D034E779}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A08CD15B-765C-4BD5-8DF5-DDC2D034E779}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A08CD15B-765C-4BD5-8DF5-DDC2D034E779}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A08CD15B-765C-4BD5-8DF5-DDC2D034E779}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D88CCD5F-E146-464D-88FD-84E6903EA00B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D88CCD5F-E146-464D-88FD-84E6903EA00B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D88CCD5F-E146-464D-88FD-84E6903EA00B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D88CCD5F-E146-464D-88FD-84E6903EA00B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53ABFEEA-D55B-4699-A274-BB4EA457706A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53ABFEEA-D55B-4699-A274-BB4EA457706A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53ABFEEA-D55B-4699-A274-BB4EA457706A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53ABFEEA-D55B-4699-A274-BB4EA457706A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {563605AF-6074-413E-986D-C6ABF8B725E1}
+	EndGlobalSection
+EndGlobal

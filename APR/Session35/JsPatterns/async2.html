@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Async 2</h1>
+
+    <script>
+      var DataService = (function () {
+        var service = {};
+
+        service.getData = function (successPtr, errorfnPtr) {
+          var n = Math.random() * 10;
+          if (n > 5) {
+            successPtr({ status: 'success', data: n });
+            return;
+          }
+          errorfnPtr({ status: 'Error', message: 'Data is Low' + n });
+        };
+        return service;
+      })();
+
+      var result = DataService.getData(whenSuccess, whenError);
+
+      function whenSuccess(data) {
+        console.log('success callback');
+        console.log(data);
+      }
+      function whenError(data) {
+        console.log('Error callback');
+        console.log(data);
+      }
+      console.log('End of Script');
+    </script>
+  </body>
+</html>

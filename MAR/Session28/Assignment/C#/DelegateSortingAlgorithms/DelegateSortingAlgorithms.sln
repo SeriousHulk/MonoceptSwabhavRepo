@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33414.496
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateSortingAlgorithms", "DelegateSortingAlgorithms\DelegateSortingAlgorithms.csproj", "{4DAE316A-5A02-4595-AB93-F6A12DF49785}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4DAE316A-5A02-4595-AB93-F6A12DF49785}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DAE316A-5A02-4595-AB93-F6A12DF49785}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DAE316A-5A02-4595-AB93-F6A12DF49785}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DAE316A-5A02-4595-AB93-F6A12DF49785}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0E73FDD5-1CDE-4694-9702-DE5A565B58B1}
+	EndGlobalSection
+EndGlobal
