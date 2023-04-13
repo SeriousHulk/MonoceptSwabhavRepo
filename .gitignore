@@ -3,7 +3,7 @@
 
 
 
-.exe
+*.exe
 ### DotnetCore ###
 # .NET Core build folders
 bin/
