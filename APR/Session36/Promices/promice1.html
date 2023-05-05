@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Promise 1>></h3>
+    <script>
+      var DataService = (function () {
+        var service = {};
+
+        service.getData = function () {
+          return new Promise(function (resolvePtr, rejectPtr) {
+            var no = Math.random() * 10;
+            if (no > 5) {
+              resolvePtr({ status: 'success', data: no });
+            } else {
+              rejectPtr({ status: 'Error', message: 'Data is Low' + no });
+            }
+          });
+        };
+        return service;
+      })();
+
+      DataService.getData().then(whenSuccess).catch(whenError);
+
+      function whenSuccess(data) {
+        console.log('success callback');
+        console.log(data);
+      }
+      function whenError(data) {
+        console.log('Error callback');
+        console.log(data);
+      }
+      console.log('End of Script');
+    </script>
+  </body>
+</html>

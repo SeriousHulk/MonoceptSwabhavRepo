@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .question-container {
+        max-width: 20%;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .question {
+        margin-bottom: 10px;
+      }
+
+      .options {
+        display: flex;
+        justify-content: left;
+      }
+
+      .btn-submit {
+        margin-top: 20px;
+      }
+
+      .result {
+        margin-top: 20px;
+        font-weight: bold;
+      }
+    </style>
+    <title>Question Bank</title>
+  </head>
+  <body>
+    <div class="question-container">
+      <h1>Question Bank</h1>
+      <p id="statement"></p>
+      <form id="quizForm">
+        <div class="options">
+          <label><input type="radio" name="answer" value="yes" />Yes</label>
+          <label><input type="radio" name="answer" value="no" />No</label>
+        </div>
+        <input type="submit" value="Submit" class="btn-submit" />
+      </form>
+      <div class="result" id="result"></div>
+      <div class="question-counter" id="questionCounter"></div>
+      <button class="btn-left" id="leftBtn">Left</button>
+      <button class="btn-right" id="rightBtn">Right</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        let questions = [
+          {
+            question: 'Is Mumbai in India?',
+            answer: 'yes',
+          },
+          {
+            question: 'Does Amitabh Hosts KBC?',
+            answer: 'yes',
+          },
+          {
+            question: "Is Nepal India's Neighbour?",
+            answer: 'yes',
+          },
+        ];
+
+        let statement = $('#statement');
+        let form = $('#quizForm');
+        let result = $('#result');
+        let questionCounter = $('#questionCounter');
+        let leftBtn = $('#leftBtn');
+        let rightBtn = $('#rightBtn');
+        let count = 0;
+        let userAnswers = [];
+
+        statement.text(questions[count].question);
+        questionCounter.text(`Question ${count + 1} of ${questions.length}`);
+
+        rightBtn.on('click', goRight);
+        leftBtn.on('click', goLeft);
+
+        function goRight() {
+          if (count < questions.length - 1) {
+            count++;
+            statement.text(questions[count].question);
+            questionCounter.text(
+              `Question ${count + 1} of ${questions.length}`
+            );
+            form.trigger('reset');
+          }
+        }
+
+        function goLeft() {
+          if (count > 0) {
+            count--;
+            statement.text(questions[count].question);
+            questionCounter.text(
+              `Question ${count + 1} of ${questions.length}`
+            );
+            form.trigger('reset');
+          }
+        }
+
+        form.on('submit', function (e) {
+          e.preventDefault();
+          let selectedAnswer = form.find('input[name="answer"]:checked').val();
+          userAnswers[count] = selectedAnswer;
+          if (count < questions.length - 1) {
+            goRight();
+            form.trigger('reset');
+          } else {
+            let score = 0;
+            for (let i = 0; i < questions.length; i++) {
+              let question = questions[i];
+              if (userAnswers[i] === question.answer) {
+                score++;
+                result.text(`Your score: ${score}/${questions.length}`);
+              }
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

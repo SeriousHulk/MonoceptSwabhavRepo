@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="getDataHandler()">Get DATA</button>
+    <img id="firstFlag" />
+    <script>
+      function getDataAsync() {
+        // Promise<Country>
+        return new Promise(function (resolve, reject) {
+          var xhr = new XMLHttpRequest();
+          xhr.addEventListener('load', function () {
+            resolve(JSON.parse(this.responseText));
+          });
+          xhr.open(
+            'GET',
+            'https://restcountries.com/v3.1/all?fields=name,flags'
+          );
+          xhr.send();
+        });
+      }
+      async function getDataHandler() {
+        var countries = await getDataAsync();
+        var india = countries.find(
+          (c) => c.name.common.toUpperCase() === 'INDIA'
+        );
+        console.log(india);
+        //console.log(india.flags.png);
+        document.querySelector('#firstFlag').src = india.flags.png;
+      }
+    </script>
+  </body>
+</html>

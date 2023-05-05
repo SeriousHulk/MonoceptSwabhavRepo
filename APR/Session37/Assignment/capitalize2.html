@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="myTextBox">Name:</label>
+    <input type="text" id="myTextBox" />
+
+    <label for="slider">Font Size:</label>
+    <input type="range" id="slider" min="10" max="30" value="16" />
+
+    <label for="textColorSelect">Text Color:</label>
+    <select id="textColorSelect">
+      <option value="black">Black</option>
+      <option value="red">Red</option>
+      <option value="blue">Blue</option>
+      <option value="green">Green</option>
+    </select>
+
+    <label for="bgColorSelect">Background Color:</label>
+    <select id="bgColorSelect">
+      <option value="white">White</option>
+      <option value="lightgray">Light Gray</option>
+      <option value="lightblue">Light Blue</option>
+      <option value="lightgreen">Light Green</option>
+    </select>
+
+    <h3 id="output">Output Text</h3>
+    <script>
+      $(document).ready(function () {  
+        $('#myTextBox').on('input', function () {
+          var inputText = $(this).val();
+          $('#output').text(inputText.toUpperCase());
+        });
+
+        $('#slider').on('input', function () {
+          var fontSize = $(this).val() + 'px';
+          $('#output').css('fontSize', fontSize);
+        });
+
+        $('#textColorSelect').on('change', function () {
+          var textColor = $(this).val();
+          $('#output').css('color', textColor);
+        });
+
+        $('#bgColorSelect').on('change', function () {
+          var bgColor = $(this).val();
+          $('#output').css('backgroundColor', bgColor);
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finding Nemo Game</title>
+    <style>
+      body {
+        text-align: center;
+      }
+
+      #container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 50px;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(255, 255, 255);
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+      }
+
+      .box:hover {
+        background-color: lightblue;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <h1>Finding Nemo Game</h1>
+    <form id="task-form">
+      <input type="text" id="task-input" placeholder="Enter no of boxes" />
+      <button type="submit">Create Boxes</button>
+    </form>
+    <div id="container" class="container"></div>
+    <button onclick="startGame()">Start Game</button>
+    <div id="afterWin"><h3></h3></div>
+    <script>
+      let nemoBoxIndex;
+      let attempts = 0;
+      let noOfBoxes = $('.collection');
+      const container = $('.container');
+
+      function startGame() {
+        $('#afterWin>h3').html('');
+        $('#task-form').on('submit', (event) => {
+          event.preventDefault();
+          const taskInput = $('#task-input');
+          if (taskInput.val() === '') {
+            alert('Please enter a value');
+          } else {
+            for (let i = 1; i <= taskInput.val(); i++) {
+              const box = $('<div></div>')
+                .addClass('box')
+                .attr('id', `box${i}`);
+              container.append(box);
+            }
+          }
+        });
+        const boxes = $('.box');
+        boxes.css('backgroundColor', 'silver');
+        boxes.css('backgroundImage', '');
+        nemoBoxIndex = Math.floor(Math.random() * boxes.length);
+        boxes.on('mousedown', checkBox);
+      }
+
+      function checkBox(event) {
+        const boxes = $('.box');
+        const clickedBoxIndex = boxes.index(event.target);
+        if (clickedBoxIndex === nemoBoxIndex) {
+          boxes.eq(clickedBoxIndex).css('backgroundImage', 'url(Nemo-FN.webp)');
+          boxes.eq(clickedBoxIndex).css('backgroundSize', 'contain');
+          boxes.eq(clickedBoxIndex).css('backgroundPosition', 'center');
+          boxes.eq(clickedBoxIndex).css('backgroundRepeat', 'no-repeat');
+          boxes.eq(clickedBoxIndex).css('align', 'center');
+          $('#afterWin>h3')
+            .html('Congratulations! You found Nemo.')
+            .fadeOut(5000);
+          resetGame();
+        } else {
+          boxes
+            .eq(clickedBoxIndex)
+            .css(
+              'backgroundColor',
+              clickedBoxIndex < nemoBoxIndex ? 'green' : 'red'
+            );
+          attempts++;
+          if (attempts === 3) {
+            alert('Game over! You did not find Nemo.');
+            resetGame();
+          }
+        }
+      }
+
+      function resetGame() {
+        $('.box').off('mousedown', checkBox);
+        attempts = 0;
+      }
+    </script>
+  </body>
+</html>

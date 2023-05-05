@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Async Await</h1>
+    <script>
+      // Promise<Number>
+      async function foo() {
+        console.log('inside Foo');
+        return 10;
+      }
+
+      //Promise<Number>
+      function bar() {
+        console.log('inside bar');
+        return new Promise((resolve, reject) => resolve(20));
+      }
+
+      foo().then((d) => console.log('foo then', d));
+      bar().then((d) => console.log('bar then', d));
+      async function main() {
+        console.log('inside main');
+        let fooResult = await foo(); //promises are awaitable
+        console.log('main then...' + fooResult);
+        console.log('End of main');
+      }
+      main();
+      console.log('End of script');
+    </script>
+  </body>
+</html>

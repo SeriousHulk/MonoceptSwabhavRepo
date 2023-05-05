@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>H</h3>
+    <button onclick="loadCountryData()">Get DATA</button>
+    <img id="firstFlag" />
+    <script>
+      function display() {
+        console.log(this.responseText);
+        var jsonRes = JSON.parse(this.responseText);
+        console.log(jsonRes[0].flags.png);
+        document.querySelector('#firstFlag').src = jsonRes[7].flags.png;
+      }
+      function loadCountryData() {
+        var xhr = new XMLHttpRequest();
+        xhr.addEventListener('load', display);
+        xhr.open('GET', 'https://restcountries.com/v3.1/all?fields=name,flags');
+        xhr.send();
+        console.log('end');
+      }
+    </script>
+  </body>
+</html>
