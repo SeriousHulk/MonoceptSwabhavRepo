@@ -3,6 +3,9 @@
 
 
 
+*.pyc
+*.pyo
+
 *.exe
 ### DotnetCore ###
 # .NET Core build folders
